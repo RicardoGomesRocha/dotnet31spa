@@ -28,8 +28,9 @@ To be considered do the following:
 We are looking for the follwing in your fork:
 
 - a sql lite database with one table to hold the temperatures and dates
-- a service class that uses Dapper to retrieve the temperatures from the database
-- the service being used in the weather forecast controller to retrieve the data.
+- a service class that uses Dapper to retrieve the temperatures from the database and unit test
+- the service being used in the weather forecast controller to retrieve the data
+- one angular component unit test using Jasmine and Karma
 
 For additional bonus points:
 
