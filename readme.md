@@ -15,7 +15,7 @@ Run
 
 -------------------------------------------------------------------------------------------------------------------
 
-September 2020: We are hiring!
+April 2021: We are hiring!
 Applicants must be able to legally work in the USA and are preferably located in the Eastern or Central time zone.
 
 To be considered do the following:
