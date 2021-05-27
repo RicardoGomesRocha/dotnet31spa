@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FetchDataService } from './fetch-data/fetch-data.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,9 @@ import { FetchDataService } from './fetch-data/fetch-data.service';
             { path: '', component: HomeComponent, pathMatch: 'full' },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
-        ], { relativeLinkResolution: 'legacy' })
+        ], { relativeLinkResolution: 'legacy' }),
+        BrowserAnimationsModule,
+        MatTableModule
     ],
     providers: [FetchDataService],
     bootstrap: [AppComponent]

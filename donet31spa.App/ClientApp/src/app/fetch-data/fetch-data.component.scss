@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+    box-shadow: 2px 4px 17px -1px #0000002b;
+
+    .mat-header-row {
+        background-color: #fbfbfb;
+
+        .mat-header-cell {
+            font-size: 14px;
+            color: black;
+        }
+    }
+}
