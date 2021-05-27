@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using dotnet31spa.Models;
+using dotnet31spa.Database;
 
 namespace dotnet31spa.Controllers
 {
@@ -18,22 +20,27 @@ namespace dotnet31spa.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        private readonly IWeatherProvider weatherProvider;
+
+        public WeatherForecastController(ILogger<WeatherForecastController> logger,
+            IWeatherProvider weatherProvider)
         {
             _logger = logger;
+            this.weatherProvider = weatherProvider;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<WeatherForecast>> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            // var rng = new Random();
+            // return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            // {
+            //     Date = DateTime.Now.AddDays(index),
+            //     TemperatureC = rng.Next(-20, 55),
+            //     Summary = Summaries[rng.Next(Summaries.Length)]
+            // })
+            // .ToArray();
+            return await this.weatherProvider.GetAll();
         }
     }
 }

@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using dotnet31spa.Database;
 
 namespace dotnet31spa
 {
@@ -26,10 +28,17 @@ namespace dotnet31spa
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddSingleton(new DatabaseConfig { Name = Configuration["DatabaseName"] });
+
+            services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
+            services.AddSingleton<IWeatherProvider, WeatherProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app,
+            IWebHostEnvironment env,
+            IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -70,6 +79,8 @@ namespace dotnet31spa
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+
+            serviceProvider.GetService<IDatabaseBootstrap>().Setup();
         }
     }
 }
