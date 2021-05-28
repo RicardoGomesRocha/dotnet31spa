@@ -10,4 +10,12 @@ table {
             color: black;
         }
     }
+
+    .mat-column-actions {
+        width: 190px;
+
+        button {
+            margin-right: 15px;
+        }
+    }
 }

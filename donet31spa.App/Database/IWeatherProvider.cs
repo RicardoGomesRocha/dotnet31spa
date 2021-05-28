@@ -7,6 +7,8 @@ namespace dotnet31spa.Database
 {
     public interface IWeatherProvider
     {
+        Task<WeatherForecast> Get(int id);
         Task<IEnumerable<WeatherForecast>> GetAll();
+
     }
 }

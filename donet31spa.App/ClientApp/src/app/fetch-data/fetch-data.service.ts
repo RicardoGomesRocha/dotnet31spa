@@ -11,4 +11,8 @@ export class FetchDataService {
     getWeatherReport(): Observable<WeatherForecast[]> {
         return this.http.get<WeatherForecast[]>(`${this.baseUrl}api/weatherforecast`);
     }
+
+    deleteWeatherReport(weather: WeatherForecast): Observable<void> {
+        return this.http.delete<void>(`${this.baseUrl}api/weatherforecast/${weather.id}`);
+    }
 }

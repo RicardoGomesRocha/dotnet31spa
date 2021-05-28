@@ -353,3 +353,4 @@ MigrationBackup/
 /database/sqldiff.exe
 /database/sqlite3_analyzer.exe
 /database/sqlite3.exe
+donet31spa.App/weather.sqlite

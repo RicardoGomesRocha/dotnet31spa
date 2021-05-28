@@ -33,6 +33,7 @@ namespace dotnet31spa
 
             services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
             services.AddSingleton<IWeatherProvider, WeatherProvider>();
+            services.AddSingleton<IWeatherRepository, WeatherRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
