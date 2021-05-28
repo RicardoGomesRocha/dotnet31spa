@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet31spa", "dotnet31spa.csproj", "{E1731A63-C5C2-4118-BD49-7BDDF9F848B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet31spa", "donet31spa.App\dotnet31spa.csproj", "{2F6A8583-8587-4999-A576-6965D001078D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "donet31spa.Tests", "donet31spa.Tests\donet31spa.Tests.csproj", "{F9B2D629-BC87-4550-B6F6-E8AB5E7B5B6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E1731A63-C5C2-4118-BD49-7BDDF9F848B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1731A63-C5C2-4118-BD49-7BDDF9F848B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1731A63-C5C2-4118-BD49-7BDDF9F848B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6A8583-8587-4999-A576-6965D001078D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6A8583-8587-4999-A576-6965D001078D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6A8583-8587-4999-A576-6965D001078D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6A8583-8587-4999-A576-6965D001078D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B2D629-BC87-4550-B6F6-E8AB5E7B5B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B2D629-BC87-4550-B6F6-E8AB5E7B5B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B2D629-BC87-4550-B6F6-E8AB5E7B5B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B2D629-BC87-4550-B6F6-E8AB5E7B5B6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

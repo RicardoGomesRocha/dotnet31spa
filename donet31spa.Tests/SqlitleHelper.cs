@@ -1,14 +1,16 @@
 using System;
 using Xunit;
 using Microsoft.Data.Sqlite;
+using Dapper;
+using System.Linq;
 
-namespace donet31spa.Tests
+namespace dotnet31spa.Tests
 {
     public static class SqliteHelper
     {
         public static void CreateTables()
         {
-            using var connection = new SqliteConnection("Filename =:memory:");
+            using var connection = new SqliteConnection("Data Source=weather.sqlite");
 
             var table = connection.Query<string>("SELECT * FROM sqlite_master WHERE type='table' AND name='Weathers';");
             var tableName = table.FirstOrDefault();
